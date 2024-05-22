@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShtoFluturimController">
+    <children>
+        <BorderPane layoutX="-1.0" layoutY="1.0" prefHeight="594.0" prefWidth="700.0" style="-fx-background-color: white;">
+            <top>
+                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="82.0" prefWidth="981.0">
+                            <children>
+                                <ImageView fitHeight="65.0" fitWidth="56.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../../../OneDrive/Documents/GitHub/KNK_23_24_Gr_16/AirportApp/src/main/resources/photos/airport_logo.png" />
+                                    </image>
+                                </ImageView>
+                                <Text layoutX="88.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prishtina International Airport ADEM JASHARI" wrappingWidth="274.603515625">
+                                    <font>
+                                        <Font name="Yu Gothic Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Hyperlink focusTraversable="false" layoutX="597.0" layoutY="38.0" onAction="#goToLogin" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" text="Sign out" textFill="#4e4e4e">
+                                    <font>
+                                        <Font name="Yu Gothic Regular" size="16.0" />
+                                    </font>
+                                </Hyperlink>
+                                <ImageView fx:id="albanianFlag" fitHeight="22.0" fitWidth="51.0" layoutX="582.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../photos/Flag_of_Albania.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="americanFlag" fitHeight="22.0" fitWidth="46.0" layoutX="633.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../photos/America_Flag.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+            </top>
+            <left>
+                <VBox prefHeight="281.0" prefWidth="174.0" style="-fx-border-color: black; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Hyperlink focusTraversable="false" onAction="#goToFluturimet" text="Flights" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#goToUsers" text="Users" textFill="#4e4e4e">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#goToStats" text="Statistics" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                        <Hyperlink textFill="#4e4e4e">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Hyperlink>
+                    </children>
+                </VBox>
+            </left>
+            <bottom>
+                <HBox prefHeight="17.0" prefWidth="700.0" BorderPane.alignment="CENTER" />
+            </bottom>
+            <center>
+
+                <AnchorPane>
+                    <children>
+                        <GridPane layoutX="-2.0" prefHeight="424.0" prefWidth="600.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="25.600012207031227" minHeight="3.2000488281249773" prefHeight="3.2000488281249773" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="57.59995117187498" minHeight="10.0" prefHeight="57.59995117187498" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label fx:id="AeroportiNisjes" prefHeight="21.0" prefWidth="102.0" text="Aeroporti i nisjes" />
+                                <Label fx:id="QytetiNisjes" text="Qyteti i nisjes" GridPane.rowIndex="1" />
+                                <Label fx:id="QytetiArritjes" text="Qyteti i arritjes" GridPane.rowIndex="3" />
+                                <Label fx:id="AeroportiArritjes" text="Aeroporti i arritjes" GridPane.rowIndex="2" />
+                                <Button fx:id="shto" mnemonicParsing="false" onAction="#shto" prefHeight="35.0" prefWidth="63.0" stylesheets="@../styling/style.css" text="Shto" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                                    <GridPane.margin>
+                                        <Insets left="170.0" top="10.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <Button fx:id="kthehuMbrapa" mnemonicParsing="false" onAction="#kthehu" stylesheets="@../styling/style.css" text="Kthehu mbrapa" GridPane.rowIndex="13">
+                                    <GridPane.margin>
+                                        <Insets top="10.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <Label fx:id="KompaniaFluturimeve" text="Kompania e fluturimeve" GridPane.rowIndex="4" />
+                                <Label fx:id="KapacitetiAeroplanit" text="Kapaciteti i Aeroplanit" GridPane.rowIndex="5" />
+                                <Label fx:id="TipiAeroplanit" text="Tipi i aeroplanit" GridPane.rowIndex="6" />
+                                <Label fx:id="dataDheOraNisjes" text="Data dhe ora e nisjes" GridPane.rowIndex="10" />
+                                <Label fx:id="dataLabel" text="Data dhe ora e kthimit" visible="false" GridPane.rowIndex="11" />
+                                <TextField fx:id="qytetiNisjes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="aeroportiArritjes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField fx:id="qytetiArritjes" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <TextField fx:id="kompania" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <TextField fx:id="kapaciteti" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <TextField fx:id="tipi" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <DatePicker fx:id="dataNisjes" promptText="DD/MM/YY">
+                                            <GridPane.margin>
+                                                <Insets right="5.0" />
+                                            </GridPane.margin></DatePicker>
+                                        <TextField fx:id="oraNisjes" GridPane.columnIndex="1">
+                                            <GridPane.margin>
+                                                <Insets left="5.0" />
+                                            </GridPane.margin></TextField>
+                                    </children>
+                                </GridPane>
+                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <DatePicker fx:id="dataKthimit" visible="false" />
+                                        <TextField fx:id="oraKthimit" visible="false" GridPane.columnIndex="1" />
+                                    </children>
+                                </GridPane>
+                                <TextField fx:id="aeroportiNisjes" GridPane.columnIndex="1" />
+                                <Label fx:id="Dydrejtimeshe" text="Dy drejtimëshe" GridPane.rowIndex="7" />
+                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <RadioButton fx:id="Po" mnemonicParsing="false" onAction="#dyDrejtimesh" text="PO">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="drejtimi" />
+                                            </toggleGroup></RadioButton>
+                                        <RadioButton fx:id="No" mnemonicParsing="false" onAction="#njeDrejtimesh" text="JO" toggleGroup="$drejtimi" GridPane.columnIndex="1" />
+                                    </children>
+                                </GridPane>
+                                <Label fx:id="StatusiFluturimit" text="Statusi i fluturimit" GridPane.rowIndex="9" />
+                                <TextField fx:id="statusi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                <TextField fx:id="kohezgjatja" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                <Label fx:id="Kohezgjatja" text="Kohezgjatja(h)" GridPane.rowIndex="8" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

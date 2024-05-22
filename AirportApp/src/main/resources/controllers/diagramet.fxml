@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="963.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DiagrametController">
+    <children>
+        <BorderPane layoutX="-1.0" layoutY="1.0" prefHeight="518.0" prefWidth="963.0" style="-fx-background-color: white;">
+            <top>
+                <HBox prefHeight="100.0" prefWidth="774.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="92.0" prefWidth="962.0">
+                            <children>
+                                <ImageView fitHeight="65.0" fitWidth="56.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../../../OneDrive/Documents/GitHub/KNK_23_24_Gr_16/AirportApp/src/main/resources/photos/airport_logo.png" />
+                                    </image>
+                                </ImageView>
+                                <Text layoutX="87.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prishtina International Airport ADEM JASHARI" wrappingWidth="270.2279357910156">
+                                    <font>
+                                        <Font name="Yu Gothic Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Hyperlink focusTraversable="false" layoutX="856.0" layoutY="41.0" onAction="#goToLogin" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" text="Sign out" textFill="#4e4e4e">
+                                    <font>
+                                        <Font name="Yu Gothic Regular" size="16.0" />
+                                    </font>
+                                </Hyperlink>
+                                <ImageView fx:id="albanianFlag" fitHeight="22.0" fitWidth="51.0" layoutX="844.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../photos/Flag_of_Albania.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="americanFlag" fitHeight="22.0" fitWidth="46.0" layoutX="902.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../photos/America_Flag.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+            </top>
+            <left>
+                <VBox prefHeight="281.0" prefWidth="174.0" style="-fx-border-color: black; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Hyperlink focusTraversable="false" onAction="#goToFluturimet" text="Flights" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#goToUsers" text="Users" textFill="#4e4e4e">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#goToStats" text="Statistics" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                    </children>
+                </VBox>
+            </left>
+            <bottom>
+                <HBox prefHeight="0.0" prefWidth="784.0" BorderPane.alignment="CENTER" />
+            </bottom>
+            <center>
+                <AnchorPane prefHeight="418.0" prefWidth="769.0">
+                    <children>
+                        <GridPane layoutX="-2.0" layoutY="6.0" prefHeight="394.0" prefWidth="664.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <BarChart fx:id="barChart" GridPane.rowIndex="1">
+                                    <xAxis>
+                                        <CategoryAxis fx:id="barChartXAxis" side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis fx:id="barChartYAxis" side="LEFT" />
+                                    </yAxis>
+                                </BarChart>
+                                <PieChart fx:id="pieChart" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="482.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="-20.0" />
+                                    </GridPane.margin></PieChart>
+                            </children>
+                        </GridPane>
+                        <Label layoutX="95.0" layoutY="-3.0" prefHeight="18.0" prefWidth="72.0" text="Label1">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="404.0" layoutY="-8.0" prefHeight="18.0" prefWidth="72.0" text="Label2">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
