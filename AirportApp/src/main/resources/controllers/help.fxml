@@ -30,7 +30,7 @@
                                             <children>
                                                 <ImageView fitHeight="65.0" fitWidth="56.0" layoutX="23.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@../../../../../../../../OneDrive/Documents/GitHub/KNK_23_24_Gr_16/AirportApp/src/main/resources/photos/airport_logo.png" />
+                                                        <Image url="@../photos/airport_logo.png" />
                                                     </image>
                                                 </ImageView>
                                                 <Text layoutX="87.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prishtina International Airport ADEM JASHARI" wrappingWidth="257.93682861328125">

@@ -25,7 +25,7 @@
             <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="476.0" spacing="10.0">
                 <ImageView fitHeight="45.0" fitWidth="46.0">
                     <image>
-                        <Image url="@../../../../../../../../OneDrive/Documents/GitHub/KNK_23_24_Gr_16/AirportApp/src/main/resources/photos/airport_logo.png" />
+                        <Image url="@../photos/airport_logo.png" />
                     </image>
                     <HBox.margin>
                         <Insets left="10.0" />
