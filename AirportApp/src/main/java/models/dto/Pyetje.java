@@ -1,4 +1,4 @@
-package modules.dto;
+package models.dto;
 
 public class Pyetje {
 }
