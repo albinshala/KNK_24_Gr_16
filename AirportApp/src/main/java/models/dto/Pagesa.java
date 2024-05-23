@@ -1,56 +1,16 @@
-package models.dto;
+package models;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
-public class Fluturimet {
+public class Pagesa {
     private int id;
-    private int aeroplani_id;
-    private int aeroporti_nisjes_id;
+    private String menyraPageses;
+    private String emriKartes;
+    private String numriKartes;
+    private Date dataSkadimit;
+    private String kodiCvv;
+    private int biletadId;
 
-    private Timestamp nisja;
-    private int aeroporti_arritjes_id;
-    private Timestamp kthimi;
-    private  String status;
-    private boolean dy_drejtimeshe;
-    private int kohezgjatja;
-    private Airoplani airoplani;
-
-    private Aeroporti aeroporti1;
-    private Aeroporti aeroporti2;
-    private String qyteti1;
-    private String qyteti2;
-    private String linja;
-
-
-
-    public Airoplani getAiroplani() {
-        return airoplani;
-    }
-
-    public void setAiroplani(Airoplani airoplani) {
-        this.airoplani = airoplani;
-    }
-
-    public Aeroporti getAeroporti1() {
-        return aeroporti1;
-    }
-
-    public void setAeroporti1(Aeroporti aeroporti1) {
-        this.aeroporti1 = aeroporti1;
-    }
-
-    public Aeroporti getAeroporti2() {
-        return aeroporti2;
-    }
-
-    public void setAeroporti2(Aeroporti aeroporti2) {
-        this.aeroporti2 = aeroporti2;
-    }
-
-    public  Fluturimet(){
-
-
-    }
 
     public int getId() {
         return id;
@@ -60,107 +20,65 @@ public class Fluturimet {
         this.id = id;
     }
 
-
-    public int getAeroplani_id() {
-        return aeroplani_id;
+    public String getMenyraPageses() {
+        return menyraPageses;
     }
 
-    public void setAeroplani_id(int aeroplani_id) {
-        this.aeroplani_id = aeroplani_id;
+    public void setMenyraPageses(String menyraPageses) {
+        this.menyraPageses = menyraPageses;
     }
 
-    public int getAeroporti_nisjes_id() {
-        return aeroporti_nisjes_id;
+    public String getEmriKartes() {
+        return emriKartes;
     }
 
-    public void setAeroporti_nisjes_id(int aeroporti_nisjes_id) {
-        this.aeroporti_nisjes_id = aeroporti_nisjes_id;
+    public void setEmriKartes(String emriKartes) {
+        this.emriKartes = emriKartes;
     }
 
-    public Timestamp getNisja() {
-        return nisja;
+    public String getNumriKartes() {
+        return numriKartes;
     }
 
-    public void setNisja(Timestamp nisja) {
-        this.nisja = nisja;
+    public void setNumriKartes(String numriKartes) {
+        this.numriKartes = numriKartes;
     }
 
-    public int getAeroporti_arritjes_id() {
-        return aeroporti_arritjes_id;
+    public Date getDataSkadimit() {
+        return dataSkadimit;
     }
 
-    public void setAeroporti_arritjes_id(int aeroporti_arritjes_id) {
-        this.aeroporti_arritjes_id = aeroporti_arritjes_id;
+    public void setDataSkadimit(Date dataSkadimit) {
+        this.dataSkadimit = dataSkadimit;
     }
 
-    public Timestamp getKthimi() {
-        return kthimi;
+    public String getKodiCvv() {
+        return kodiCvv;
     }
 
-    public void setKthimi(Timestamp kthimi) {
-        this.kthimi = kthimi;
+    public void setKodiCvv(String kodiCvv) {
+        this.kodiCvv = kodiCvv;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Fluturimet(int id, int aeroplani_id, int aeroporti_nisjes_id, Timestamp nisja, int aeroporti_arritjes_id, Timestamp arritja, String status, boolean dyDrejtimeshe, int kohezgjatja) {
+    public Pagesa(int id, String menyraPageses, String emriKartes, String numriKartes, Date dataSkadimit, String kodiCvv, int biletadId) {
         this.id = id;
-        this.aeroplani_id = aeroplani_id;
-        this.aeroporti_nisjes_id = aeroporti_nisjes_id;
-        this.nisja = nisja;
-        this.aeroporti_arritjes_id = aeroporti_arritjes_id;
-        this.kthimi = arritja;
-        this.status = status;
-        dy_drejtimeshe = dyDrejtimeshe;
-        this.kohezgjatja = kohezgjatja;
+        this.menyraPageses = menyraPageses;
+        this.emriKartes = emriKartes;
+        this.numriKartes = numriKartes;
+        this.dataSkadimit = dataSkadimit;
+        this.kodiCvv = kodiCvv;
+        this.biletadId = biletadId;
     }
 
-    public String getQyteti1() {
-        return qyteti1;
+    public int getBiletadId() {
+        return biletadId;
     }
 
-    public void setQyteti1(String qyteti1) {
-        this.qyteti1 = qyteti1;
-    }
-
-    public String getQyteti2() {
-        return qyteti2;
-    }
-
-    public void setQyteti2(String qyteti2) {
-        this.qyteti2 = qyteti2;
-    }
-
-    public String getLinja() {
-        return linja;
-    }
-
-    public void setLinja(String linja) {
-        this.linja = linja;
-    }
-
-    public boolean isDy_drejtimeshe() {
-        return dy_drejtimeshe;
-    }
-
-    public void setDy_drejtimeshe(boolean dy_drejtimeshe) {
-        this.dy_drejtimeshe = dy_drejtimeshe;
-    }
-
-    public int getKohezgjatja() {
-        return kohezgjatja;
-    }
-
-    public void setKohezgjatja(int kohezgjatja) {
-        this.kohezgjatja = kohezgjatja;
+    public void setBiletadId(int biletadId) {
+        this.biletadId = biletadId;
     }
 }
+
 
 
 
