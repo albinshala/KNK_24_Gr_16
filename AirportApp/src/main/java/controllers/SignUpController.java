@@ -87,6 +87,10 @@ public class SignUpController extends HomeController implements Initializable {
                 Perdoruesi user = UserSevice.signUp(pemri, pmbiemri, pusername,pfjalekalimi,
                         pgjinia,isAdmin,pditelindja);
                 goTo("Log In", "login.fxml", actionEvent);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION,"Congratulations! You have been signed up successfully.");
+                alert.setTitle("Sign Up Successful");
+                alert.setHeaderText(null);
+                alert.show();
 
             }else{
                 Alert alert = new Alert(Alert.AlertType.ERROR,"Invalid username(taken)!");
