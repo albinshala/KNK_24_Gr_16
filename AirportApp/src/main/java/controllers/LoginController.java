@@ -12,8 +12,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import models.Perdoruesi;
-import models.Rezervimi;
+import models.dto.Perdoruesi;
+import models.dto.Rezervimi;
 import service.UserSevice;
 
 import java.io.IOException;

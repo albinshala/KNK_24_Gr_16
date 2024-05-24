@@ -1,14 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controllers.Home"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+    <children>
+        <BorderPane layoutX="-1.0" layoutY="1.0" prefHeight="518.0" prefWidth="850.0" style="-fx-background-color: white;">
+            <top>
+                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="82.0" prefWidth="981.0">
+                            <children>
+                                <ImageView fitHeight="65.0" fitWidth="56.0" layoutX="20.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../photos/airport_logo.png" />
+                                    </image>
+                                </ImageView>
+                                <Text layoutX="92.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prishtina International Airport ADEM JASHARI" wrappingWidth="242.32424926757812">
+                                    <font>
+                                        <Font name="Yu Gothic Bold" size="18.0" />
+                                    </font>
+                                </Text>
+                                <Hyperlink focusTraversable="false" layoutX="738.0" layoutY="41.0" onAction="#goToLogin" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" text="Sign out" textFill="#190202">
+                                    <font>
+                                        <Font name="Yu Gothic UI Regular" size="16.0" />
+                                    </font>
+                                </Hyperlink>
+                                <ImageView fx:id="albanianFlag" fitHeight="22.0" fitWidth="51.0" layoutX="726.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../photos/Flag_of_Albania.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="americanFlag" fitHeight="22.0" fitWidth="46.0" layoutX="784.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../photos/America_Flag.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+            </top>
+            <left>
+                <VBox prefHeight="408.0" prefWidth="169.0" style="-fx-border-color: black; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Hyperlink focusTraversable="false" onAction="#goToFluturimet" style=" -fx-border-color: transparent;" text="Flights" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic UI Regular" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#goToProfile" text="User profile" textFill="#4e4e4e">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Yu Gothic UI Regular" size="20.0" />
+                            </font>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#help" text="Help" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic UI Regular" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                    </children>
+                </VBox>
+            </left>
+            <center>
+                <Pane prefHeight="413.0" prefWidth="526.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text layoutX="134.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Kosovo International Airport">
+                            <font>
+                                <Font name="Yu Gothic UI Bold" size="22.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="366.0" fitWidth="602.0" layoutX="39.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../photos/homepage.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </center>
+        </BorderPane>
+    </children>
 </AnchorPane>

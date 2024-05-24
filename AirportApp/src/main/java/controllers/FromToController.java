@@ -11,8 +11,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import models.Fluturimet;
-import models.Rezervimi;
+import models.dto.Fluturimet;
+import models.dto.Rezervimi;
 import repository.FluturimetRepository;
 
 import java.io.IOException;

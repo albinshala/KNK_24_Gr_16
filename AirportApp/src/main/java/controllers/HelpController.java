@@ -5,8 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
-import models.Pyetje;
-import models.Rezervimi;
+import models.dto.Pyetje;
+import models.dto.Rezervimi;
 import repository.PyetjeRepository;
 
 public class HelpController extends HomeController{

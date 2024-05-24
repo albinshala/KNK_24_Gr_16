@@ -20,7 +20,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
-import models.Fluturimet;
+import models.dto.Fluturimet;
 import repository.FluturimetRepository;
 
 public class FluturimetController extends HomeController implements Initializable {

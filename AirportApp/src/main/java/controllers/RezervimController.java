@@ -10,10 +10,10 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-import models.Bagazhet;
-import models.Bileta;
-import models.Pasagjeri;
-import models.Rezervimi;
+import models.dto.Bagazhet;
+import models.dto.Bileta;
+import models.dto.Pasagjeri;
+import models.dto.Rezervimi;
 import repository.*;
 
 import java.io.IOException;
@@ -219,6 +219,7 @@ public class RezervimController extends HomeController implements Initializable 
             cmimi.setText("Çmim jo i disponueshëm");
         }
     }
+}
 /*
     public void shihQmimin(ActionEvent actionEvent) {
         Double q = kalkuloÇmimin();
@@ -226,3 +227,5 @@ public class RezervimController extends HomeController implements Initializable 
 
 
 }
+
+ */

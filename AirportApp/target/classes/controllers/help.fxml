@@ -1,14 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controllers.Help"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HelpController">
+    <children>
+        <BorderPane layoutX="-1.0" layoutY="-7.0" prefHeight="587.0" prefWidth="934.0" style="-fx-background-color: white;">
+            <top>
+                <FlowPane BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane>
+                            <children>
+                                <HBox prefHeight="96.0" prefWidth="858.0">
+                                    <children>
+                                        <Pane prefHeight="94.0" prefWidth="861.0">
+                                            <children>
+                                                <ImageView fitHeight="65.0" fitWidth="56.0" layoutX="23.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../photos/airport_logo.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Text layoutX="87.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prishtina International Airport ADEM JASHARI" wrappingWidth="257.93682861328125">
+                                                    <font>
+                                                        <Font name="Yu Gothic Bold" size="20.0" />
+                                                    </font>
+                                                </Text>
+                                                <Hyperlink focusTraversable="false" layoutX="735.0" layoutY="41.0" onAction="#goToLogin" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" text="Sign out" textFill="#4e4e4e">
+                                                    <font>
+                                                        <Font name="Yu Gothic Bold" size="16.0" />
+                                                    </font>
+                                                </Hyperlink>
+                                                <ImageView fx:id="albanianFlag" fitHeight="22.0" fitWidth="51.0" layoutX="721.0" layoutY="14.0">
+                                                    <image>
+                                                        <Image url="@../photos/Flag_of_Albania.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fx:id="americanFlag" fitHeight="22.0" fitWidth="46.0" layoutX="772.0" layoutY="14.0">
+                                                    <image>
+                                                        <Image url="@../photos/America_Flag.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </Pane>
+                    </children>
+                </FlowPane>
+            </top>
+            <left>
+                <VBox prefHeight="281.0" prefWidth="174.0" style="-fx-border-color: black; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Hyperlink focusTraversable="false" onAction="#goToFluturimet" text="Flights" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#goToProfile" text="User profile" textFill="#4e4e4e">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                        </Hyperlink>
+                        <Hyperlink focusTraversable="false" onAction="#help" text="Help" textFill="#4e4e4e">
+                            <font>
+                                <Font name="Yu Gothic Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                    </children>
+                </VBox>
+            </left>
+            <bottom>
+                <HBox prefHeight="0.0" prefWidth="774.0" BorderPane.alignment="CENTER" />
+            </bottom>
+            <center>
 
+                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="687.0" style="-fx-background-image: url(../photos/airport_logo.png);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <HBox prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #8ca7d1;">
+                            <children>
+                                <Label textFill="WHITE">
+                                    <font>
+                                        <Font name="System Italic" size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="20.0" top="2.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aeroporti Ndërkombëtar i Prishtinës Adem Jashari është aeroporti">
+                            <font>
+                                <Font name="Yu Gothic Medium" size="19.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="50.0" top="50.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="i vetem dhe kryesor në Kosovë, që ofron shërbime ">
+                            <font>
+                                <Font name="Yu Gothic Medium" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="110.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                 te avancuara per udhetaret.">
+                            <font>
+                                <Font name="Yu Gothic Medium" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="100.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Nese deshironi te dini me shume mund te na">
+                            <font>
+                                <Font name="Yu Gothic Medium" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="100.0" top="50.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     shkruani ne emailin tone zyrtar">
+                            <font>
+                                <Font name="Yu Gothic Medium" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="160.0" />
+                            </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="pyetja" maxWidth="282.0" prefHeight="108.0" prefWidth="282.0" promptText="Shenoni ketu" style="-fx-max-width: 250px;">
+                            <VBox.margin>
+                                <Insets left="220.0" top="10.0" />
+                            </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#dergoMesazhin" stylesheets="@../styling/style.css" text="Dergo">
+                            <VBox.margin>
+                                <Insets left="330.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="5.0" />
+                    </BorderPane.margin>
+                </VBox>
+
+            </center>
+        </BorderPane>
+    </children>
 </AnchorPane>

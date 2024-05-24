@@ -10,7 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import models.Perdoruesi;
+import models.dto.Perdoruesi;
 import service.UserSevice;
 
 import java.net.URL;
