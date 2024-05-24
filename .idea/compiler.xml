@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="KNK_PROJEKTI_2022_23" />
+        <module name="AirportApp" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="AirportApp" target="22" />
-    </bytecodeTargetLevel>
   </component>
 </project>
