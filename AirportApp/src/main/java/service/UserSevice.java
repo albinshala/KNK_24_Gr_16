@@ -1,6 +1,6 @@
 package service;
 
-import models.Perdoruesi;
+import models.dto.Perdoruesi;
 import repository.UserRepository;
 
 import java.sql.Date;

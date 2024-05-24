@@ -1,6 +1,6 @@
 package repository;
 
-import models.Pyetje;
+import models.dto.Pyetje;
 import service.DBConnection;
 
 import java.sql.Connection;

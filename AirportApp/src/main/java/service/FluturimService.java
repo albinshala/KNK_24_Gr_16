@@ -1,9 +1,9 @@
 package service;
 
-import models.Aeroporti;
-import models.Airoplani;
-import models.Bileta;
-import models.Fluturimet;
+import models.dto.Aeroporti;
+import models.dto.Airoplani;
+import models.dto.Bileta;
+import models.dto.Fluturimet;
 import repository.AeroportiRepository;
 import repository.AiroplaniRepository;
 import repository.BiletaRepository;

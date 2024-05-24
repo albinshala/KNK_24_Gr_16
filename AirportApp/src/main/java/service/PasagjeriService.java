@@ -1,7 +1,7 @@
 package service;
 
-import models.Pasagjeri;
-import models.Perdoruesi;
+import models.dto.Pasagjeri;
+import models.dto.Perdoruesi;
 import repository.PasagjeriRepository;
 import repository.UserRepository;
 

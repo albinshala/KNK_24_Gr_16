@@ -2,11 +2,11 @@ package repository;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import models.Aeroporti;
-import models.Airoplani;
-import models.Fluturimet;
+import models.dto.Aeroporti;
+import models.dto.Airoplani;
+import models.dto.Fluturimet;
 import service.DBConnection;
-import models.Perdoruesi;
+import models.dto.Perdoruesi;
 
 import java.sql.*;
 

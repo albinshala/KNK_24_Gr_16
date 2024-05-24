@@ -1,8 +1,8 @@
 package repository;
 
-import models.Pasagjeri;
-import models.Perdoruesi;
-import models.Rezervimi;
+import models.dto.Pasagjeri;
+import models.dto.Perdoruesi;
+import models.dto.Rezervimi;
 import service.DBConnection;
 
 import java.sql.*;
