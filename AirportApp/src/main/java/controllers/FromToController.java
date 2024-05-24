@@ -1,12 +1,10 @@
 package controllers;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -19,7 +17,6 @@ import repository.FluturimetRepository;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Locale;
@@ -136,7 +133,7 @@ public class FromToController extends HomeController implements Initializable {
         String d = "";
         String dc = "";
         String rc = "";
-        ObservableList<Fluturimet> list = null;
+        ObservableList<FluturimetController> list = null;
         if (dyDrejtimeshi){
             if (departureDatePicker.getValue()!= null && returnDatePicker.getValue() != null
                     && departingCityChoiceBox.getValue() != null && arrivalCityChoiceBox.getValue() != null && drejtimi.getSelectedToggle().isSelected()){
@@ -177,16 +174,16 @@ public class FromToController extends HomeController implements Initializable {
             translateEnglish();
         });
         try {
-            ObservableList<Fluturimet> list1 = FluturimetRepository.getAllDistinctByCity(0);
-            ObservableList<Fluturimet> list2 = FluturimetRepository.getAllDistinctByCity(1);
-            Collections.sort(list1, Comparator.comparing(Fluturimet::getQyteti1));
-            Collections.sort(list2, Comparator.comparing(Fluturimet::getQyteti2));
+            ObservableList<FluturimetController> list1 = FluturimetRepository.getAllDistinctByCity(0);
+            ObservableList<FluturimetController> list2 = FluturimetRepository.getAllDistinctByCity(1);
+            Collections.sort(list1, Comparator.comparing(FluturimetController::getQyteti1));
+            Collections.sort(list2, Comparator.comparing(FluturimetController::getQyteti2));
 
-            for (Fluturimet fluturim: list1 ) {
+            for (FluturimetController fluturim: list1 ) {
                 departingCityChoiceBox.getItems().add(fluturim.getQyteti1());
             }
 
-            for (Fluturimet fluturim: list2 ) {
+            for (FluturimetController fluturim: list2 ) {
                 arrivalCityChoiceBox.getItems().add(fluturim.getQyteti2());
             }
         } catch (Exception e) {
@@ -213,7 +210,7 @@ public class FromToController extends HomeController implements Initializable {
     public void rezervo(ActionEvent actionEvent) {
 
         // Get the selected row
-        Fluturimet selectedObject = (Fluturimet) tabela.getSelectionModel().getSelectedItem();
+        FluturimetController selectedObject = (FluturimetController) tabela.getSelectionModel().getSelectedItem();
 
         // Get the ID of the selected row
         if (selectedObject != null){
@@ -237,7 +234,7 @@ public class FromToController extends HomeController implements Initializable {
 
     }
 
-    private void setInTable(ObservableList<Fluturimet> list){
+    private void setInTable(ObservableList<FluturimetController> list){
         linja.setCellValueFactory(new PropertyValueFactory<>("linja"));
         nisja.setCellValueFactory(new PropertyValueFactory<>("nisja"));
         kthimi.setCellValueFactory(new PropertyValueFactory<>("kthimi"));
