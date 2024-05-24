@@ -3,6 +3,7 @@ module com.example.airportapp {
     requires javafx.fxml;
 
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
 
     opens com.example.airportapp to javafx.fxml;
     exports com.example.airportapp;
