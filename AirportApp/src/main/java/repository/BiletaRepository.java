@@ -1,7 +1,7 @@
 package repository;
 
 import service.DBConnection;
-import models.Bileta;
+import models.dto.Bileta;
 
 import java.sql.*;
 

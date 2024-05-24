@@ -11,10 +11,10 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-import models.Aeroporti;
-import models.Airoplani;
-import models.Fluturimet;
-import models.Rezervimi;
+import models.dto.Aeroporti;
+import models.dto.Airoplani;
+import models.dto.Fluturimet;
+import models.dto.Rezervimi;
 import service.FluturimService;
 
 import java.net.URL;

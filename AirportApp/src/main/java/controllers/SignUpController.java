@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import models.Perdoruesi;
+import models.dto.Perdoruesi;
 import service.UserSevice;
 
 import java.net.URL;

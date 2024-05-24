@@ -1,7 +1,7 @@
 package repository;
 
 
-import models.Airoplani;
+import models.dto.Airoplani;
 import service.DBConnection;
 
 import java.sql.*;

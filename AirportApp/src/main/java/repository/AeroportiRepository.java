@@ -1,6 +1,6 @@
 package repository;
 
-import models.Aeroporti;
+import models.dto.Aeroporti;
 import service.DBConnection;
 
 import java.sql.*;
