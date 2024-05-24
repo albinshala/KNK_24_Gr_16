@@ -2,7 +2,7 @@ package models.dto;
 
 import java.sql.Date;
 
-public class Pagesa {
+public class PagesaRepository {
     private int id;
     private String menyraPageses;
     private String emriKartes;
@@ -60,7 +60,7 @@ public class Pagesa {
         this.kodiCvv = kodiCvv;
     }
 
-    public Pagesa(int id, String menyraPageses, String emriKartes, String numriKartes, Date dataSkadimit, String kodiCvv, int biletadId) {
+    public PagesaRepository(int id, String menyraPageses, String emriKartes, String numriKartes, Date dataSkadimit, String kodiCvv, int biletadId) {
         this.id = id;
         this.menyraPageses = menyraPageses;
         this.emriKartes = emriKartes;
