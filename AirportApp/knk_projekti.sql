@@ -18,8 +18,8 @@ CREATE TABLE pasagjeret (
   perdoruesi_id INT,
   adresa VARCHAR(255),
   nacionaliteti VARCHAR(40),
-  numri_telefonit VARCHAR(20),
-  numri_pasaportes VARCHAR(9),
+  numri_telefonit DOUBLE,
+  numri_pasaportes DOUBLE,
   FOREIGN KEY (perdoruesi_id) REFERENCES perdoruesit(id)
 );
 
