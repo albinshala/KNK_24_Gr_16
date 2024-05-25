@@ -8,9 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import models.dto.Perdoruesi;
+import models.Perdoruesi;
 import service.UserSevice;
 
 import java.net.URL;

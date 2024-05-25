@@ -10,8 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import models.dto.Perdoruesi;
-import models.dto.Rezervimi;
+import models.Perdoruesi;
+import models.Rezervimi;
 import service.UserSevice;
 
 import java.io.IOException;

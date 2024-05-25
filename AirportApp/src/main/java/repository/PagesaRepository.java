@@ -1,6 +1,6 @@
 package repository;
 
-import models.dto.Pagesa;
+import models.Pagesa;
 import service.DBConnection;
 
 import java.sql.*;

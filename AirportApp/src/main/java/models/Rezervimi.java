@@ -1,4 +1,4 @@
-package models.dto;
+package models;
 
 public class Rezervimi {
     private int id;

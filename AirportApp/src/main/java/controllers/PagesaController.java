@@ -11,7 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import models.dto.*;
+import models.*;
 import repository.BagazhetRepository;
 import repository.BiletaRepository;
 import repository.PagesaRepository;

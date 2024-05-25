@@ -1,6 +1,6 @@
 package repository;
 
-import models.dto.Rezervimi;
+import models.Rezervimi;
 import service.DBConnection;
 
 import java.sql.Connection;

@@ -7,6 +7,10 @@ module com.example.airportapp {
     opens com.example.airportapp to javafx.fxml;
     opens controllers to javafx.fxml;
 
-    exports com.example.airportapp;
-    exports controllers;
+    exports com.example.airportapp  to javafx.graphics;
+    exports controllers  to javafx.graphics;
+
+    opens models;
+    exports models;
+
 }

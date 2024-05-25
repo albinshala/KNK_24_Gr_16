@@ -2,8 +2,10 @@ package repository;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.DatePicker;
-import models.dto.*;
+import models.Aeroporti;
+import models.Airoplani;
+import models.Fluturimet;
+import models.*;
 import service.DBConnection;
 
 import java.sql.*;

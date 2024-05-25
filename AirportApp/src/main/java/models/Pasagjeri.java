@@ -1,6 +1,4 @@
-package models.dto;
-
-import java.sql.Date;
+package models;
 
 public class Pasagjeri extends Perdoruesi {
     private int id;

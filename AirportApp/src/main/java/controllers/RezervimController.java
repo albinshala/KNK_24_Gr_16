@@ -4,29 +4,29 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-import models.dto.Bagazhet;
-import models.dto.Bileta;
-import models.dto.Pasagjeri;
-import models.dto.Rezervimi;
+import models.Bagazhet;
+import models.Bileta;
+import models.Pasagjeri;
+import models.Rezervimi;
 import repository.*;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class RezervimController extends HomeController implements Initializable {
 
     @FXML
-    private ChoiceBox kategoria;
+    private ChoiceBox<String> kategoria;  // Specify the type of ChoiceBox
 
     @FXML
     private TextField numriBagazhev;
@@ -61,7 +61,7 @@ public class RezervimController extends HomeController implements Initializable 
     public static int pasagjeriId;
     private int qmimi;
 
-    Alert alert = new Alert(Alert.AlertType.ERROR, "");
+    Alert alert = new Alert(Alert.AlertType.ERROR,"");
 
     @FXML
     void vazhdo(ActionEvent event) throws SQLException {
@@ -70,45 +70,33 @@ public class RezervimController extends HomeController implements Initializable 
             Bagazhet bagazh = new Bagazhet(0, pasagjeriId, Integer.parseInt(numriBagazhev.getText()),
                     Integer.parseInt(pesha.getText()));
             PagesaController.setData(bagazh);
-            //BagazhetRepository.insert(bagazh);
-            int qmimi = 200;
-            if (kategoria.equals("Ekonomike")) {
-                qmimi += 50;
-            } else if (kategoria.equals("Biznesore")) {
-                qmimi += 30;
-            }
-            if (Integer.parseInt(numriBagazhev.getText()) > 1) {
-                qmimi += 30;
-            }
 
-            çmimi.setText(qmimi + "");
+            double calculatedPrice = kalkuloÇmimin();
+            çmimi.setText(String.valueOf(calculatedPrice));
 
             if (RezervimiRepository.isValidSeat(Integer.parseInt(numriUleses.getText()), FromToController.fId)
                     && AiroplaniRepository.intoCapacity(Integer.parseInt(numriUleses.getText()), FromToController.fId)) {
-                Bileta bileta = new Bileta(0, Integer.parseInt(çmimi.getText()));
+                Bileta bileta = new Bileta(0, (int) calculatedPrice);
                 PagesaController.setData(bileta);
-                // int biletaId = BiletaRepository.insert(bileta);
-                // PagesaController.bId = biletaId;
+
                 Rezervimi rezervimi = new Rezervimi(0, pasagjeriId, FromToController.fId,
-                        Integer.parseInt(numriUleses.getText()), kategoria.getValue().toString(), 0);
-                // RezervimiRepository.insert(rezervimi);
+                        Integer.parseInt(numriUleses.getText()), kategoria.getValue(), 0);
                 PagesaController.setData(rezervimi);
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("pagesa.fxml"));
+
                 try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/controllers/pagesa.fxml"));
                     Parent root = fxmlLoader.load();
                     PagesaController pagesaController = fxmlLoader.getController();
                     Stage stage = new Stage();
                     Scene scene = new Scene(root);
-                    stage.setResizable(false);
                     stage.setScene(scene);
                     stage.setTitle("Pagesa");
+                    stage.setResizable(false);
                     stage.show();
-                    Stage stage1 = (Stage) kategoria.getScene().getWindow();
-                    stage1.close();
-
-                } catch (IOException e1) {
-                    throw new RuntimeException(e1);
+                    // Close the current stage
+                    ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             } else {
                 alert.setContentText("This seat is reserved/out of capacity!");
@@ -133,9 +121,7 @@ public class RezervimController extends HomeController implements Initializable 
         americanFlag.setOnMouseClicked(e -> {
             translateEnglish();
         });
-
     }
-
 
     void validateField(TextField field) {
         field.setOnKeyPressed(e -> {
@@ -159,7 +145,6 @@ public class RezervimController extends HomeController implements Initializable 
         cmimi.setText(translate.getString("label.cmimi"));
         vazhdo.setText(translate.getString("button.vazhdo"));
         anulo.setText(translate.getString("button.anulo"));
-
     }
 
     @Override
@@ -174,15 +159,14 @@ public class RezervimController extends HomeController implements Initializable 
         cmimi.setText(translate.getString("label.cmimi"));
         vazhdo.setText(translate.getString("button.vazhdo"));
         anulo.setText(translate.getString("button.anulo"));
-
     }
 
     public double kalkuloÇmimin() {
         double qmimiBaze = 0, baggagePrice = 0, suitcasePrice = 0;
 
         String category = kategoria.getValue().toString();
-        double baggageWeight = Double.parseDouble(bagazhi.getText());
-        int suitcaseCount = Integer.parseInt(nrBagazhit.getText());
+        double baggageWeight = Double.parseDouble(pesha.getText());
+        int suitcaseCount = Integer.parseInt(numriBagazhev.getText());
 
         if (category.equals("Ekonomike")) {
             qmimiBaze = 100.0;
@@ -195,7 +179,6 @@ public class RezervimController extends HomeController implements Initializable 
         baggagePrice = baggageWeight * 10.0;
         suitcasePrice = suitcaseCount * 20.0;
 
-
         return qmimiBaze + baggagePrice + suitcasePrice;
     }
 
@@ -205,27 +188,9 @@ public class RezervimController extends HomeController implements Initializable 
         stage.close();
     }
 
-
     @FXML
-
     public void shihQmimin(ActionEvent actionEvent) {
-        // Kontrollo nëse metoda kalkuloÇmimin() kthen një vlerë jo-null dhe e konverton në Double.
-        Double q = kalkuloÇmimin();
-        if (q != null) {
-            // Vendos çmimin në komponentin 'cmimi' si tekst.
-            cmimi.setText(String.valueOf(q));
-        } else {
-            // Opsional: Mund të vendosni një tekst default në rast se 'q' është null.
-            cmimi.setText("Çmim jo i disponueshëm");
-        }
+        double q = kalkuloÇmimin();
+        çmimi.setText(String.valueOf(q));
     }
 }
-/*
-    public void shihQmimin(ActionEvent actionEvent) {
-        Double q = kalkuloÇmimin();
-        cmimi.setText(q + "");
-
-
-}
-
- */

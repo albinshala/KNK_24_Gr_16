@@ -1,11 +1,8 @@
 package service;
 
-import models.dto.Pasagjeri;
-import models.dto.Perdoruesi;
+import models.Pasagjeri;
 import repository.PasagjeriRepository;
-import repository.UserRepository;
 
-import java.sql.Date;
 import java.sql.SQLException;
 
 public class PasagjeriService {

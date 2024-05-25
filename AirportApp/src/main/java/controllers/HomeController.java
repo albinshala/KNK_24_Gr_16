@@ -10,7 +10,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import java.io.IOException;
-import models.dto.Rezervimi;
+import models.Rezervimi;
 
 
 public class HomeController {

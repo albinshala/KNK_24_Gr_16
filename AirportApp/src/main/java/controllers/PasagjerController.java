@@ -2,18 +2,13 @@ package controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import models.dto.Pasagjeri;
-import models.dto.Perdoruesi;
-import models.dto.Rezervimi;
-import service.PasagjeriService;
+import models.Pasagjeri;
+import models.Perdoruesi;
+import models.Rezervimi;
 
 import java.net.URL;
 import java.util.Locale;

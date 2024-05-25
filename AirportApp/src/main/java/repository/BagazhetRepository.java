@@ -1,7 +1,6 @@
 package repository;
 
-import models.dto.Bagazhet;
-import models.dto.Bileta;
+import models.Bagazhet;
 import service.DBConnection;
 
 import java.sql.Connection;
